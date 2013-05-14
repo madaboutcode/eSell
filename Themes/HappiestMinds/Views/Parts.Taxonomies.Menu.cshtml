@@ -1,0 +1,47 @@
+﻿@using Orchard.Utility.Extensions;
+@using Contrib.Taxonomies.Models;
+@using Contrib.Taxonomies.Helpers;
+
+@{
+    Style.Include("admin-taxonomy.css");
+    int level=0;
+    int firstLevel = -1;
+}
+
+<div class="taxonomy-menu" id="taxonomy-menu">
+    <ul class="terms">
+    @{ var levelCount = 0; }
+	@foreach (TermPart term in Model.Terms) {
+     if(firstLevel == -1){
+         firstLevel = term.GetLevels();
+     }
+     var text = Model.ContentPart.DisplayContentCount ? term.Name + T(" ({0})", term.Count).Text : term.Name;
+		if(term.GetLevels() - firstLevel > level) {
+			level++;
+			@:<ul class="terms">
+		}
+		    @:</li>
+		
+		if(term.GetLevels() - firstLevel < level) {
+			level--;
+			@:</ul>
+		}
+        var className = levelCount == 0 ? "first" : "";
+        
+        if(levelCount == Model.Terms.Count-1)
+        {    
+            className = "last";
+        }
+            
+		@:<li class='@className'>
+			@Html.ItemDisplayLink(text, term.ContentItem)
+
+        levelCount++;
+    }
+		</li>
+	@for (int i = 0; i < level; i++)
+ {
+	@:</ul>
+	}
+</ul>
+</div>

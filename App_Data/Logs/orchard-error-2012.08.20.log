@@ -1,0 +1,163 @@
+2012-08-20 08:30:28,604 [37] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 08:30:28,619 [37] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 08:30:28,635 [37] Orchard.Alias.Implementation.Updater.AliasHolderUpdater - Exception during Alias refresh
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id1_0_, this_.Path as Path1_0_, this_.RouteValues as RouteVal3_1_0_, this_.Source as Source1_0_, this_.Action_id as Action5_1_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc ]
+[SQL: SELECT this_.Id as Id1_0_, this_.Path as Path1_0_, this_.RouteValues as RouteVal3_1_0_, this_.Source as Source1_0_, this_.Action_id as Action5_1_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc] ---> System.Data.SqlServerCe.SqlCeException: There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Alias.Implementation.Storage.AliasStorage.List()
+   at Orchard.Alias.Implementation.Updater.AliasHolderUpdater.Refresh()
+2012-08-20 08:30:28,697 [37] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 08:30:28,697 [37] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 08:30:28,697 [37] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id43_0_, this_.TaskType as TaskType43_0_, this_.ScheduledUtc as Schedule3_43_0_, this_.ContentItemVersionRecord_id as ContentI4_43_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ? ]
+Positional parameters:  #0>8/20/2012 8:30:28 AM
+[SQL: SELECT this_.Id as Id43_0_, this_.TaskType as TaskType43_0_, this_.ScheduledUtc as Schedule3_43_0_, this_.ContentItemVersionRecord_id as ContentI4_43_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ?] ---> System.Data.SqlServerCe.SqlCeException: There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Orchard.Core.Scheduling.Services.ScheduledTaskExecutor.Sweep() in c:\Build\Orchard\src\Orchard.Web\Core\Scheduling\Services\ScheduledTaskExecutor.cs:line 36
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 31
+2012-08-20 18:52:52,703 [91] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 18:52:52,718 [91] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 18:52:52,718 [91] Orchard.Alias.Implementation.Updater.AliasHolderUpdater - Exception during Alias refresh
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id1_0_, this_.Path as Path1_0_, this_.RouteValues as RouteVal3_1_0_, this_.Source as Source1_0_, this_.Action_id as Action5_1_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc ]
+[SQL: SELECT this_.Id as Id1_0_, this_.Path as Path1_0_, this_.RouteValues as RouteVal3_1_0_, this_.Source as Source1_0_, this_.Action_id as Action5_1_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc] ---> System.Data.SqlServerCe.SqlCeException: There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Alias.Implementation.Storage.AliasStorage.List()
+   at Orchard.Alias.Implementation.Updater.AliasHolderUpdater.Refresh()
+2012-08-20 18:52:52,812 [91] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 18:52:52,812 [91] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 18:52:52,812 [91] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id43_0_, this_.TaskType as TaskType43_0_, this_.ScheduledUtc as Schedule3_43_0_, this_.ContentItemVersionRecord_id as ContentI4_43_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ? ]
+Positional parameters:  #0>8/20/2012 6:52:52 PM
+[SQL: SELECT this_.Id as Id43_0_, this_.TaskType as TaskType43_0_, this_.ScheduledUtc as Schedule3_43_0_, this_.ContentItemVersionRecord_id as ContentI4_43_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ?] ---> System.Data.SqlServerCe.SqlCeException: There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Orchard.Core.Scheduling.Services.ScheduledTaskExecutor.Sweep() in c:\Build\Orchard\src\Orchard.Web\Core\Scheduling\Services\ScheduledTaskExecutor.cs:line 36
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 31
+2012-08-20 18:52:52,890 [91] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 18:52:52,890 [91] NHibernate.Util.ADOExceptionReporter - There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+2012-08-20 18:52:52,906 [91] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id66_3_, this_.Number as Number66_3_, this_.Published as Published66_3_, this_.Latest as Latest66_3_, this_.Data as Data66_3_, this_.ContentItemRecord_id as ContentI6_66_3_, contentite1_.Id as Id65_0_, contentite1_.Data as Data65_0_, contentite1_.ContentType_id as ContentT3_65_0_, sitesettin4_.Id as Id33_1_, sitesettin4_.SiteSalt as SiteSalt33_1_, sitesettin4_.SiteName as SiteName33_1_, sitesettin4_.SuperUser as SuperUser33_1_, sitesettin4_.PageTitleSeparator as PageTitl5_33_1_, sitesettin4_.HomePage as HomePage33_1_, sitesettin4_.SiteCulture as SiteCult7_33_1_, sitesettin4_.ResourceDebugMode as Resource8_33_1_, sitesettin4_.PageSize as PageSize33_1_, sitesettin4_.SiteTimeZone as SiteTim10_33_1_, contenttyp5_.Id as Id67_2_, contenttyp5_.Name as Name67_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ? ]
+Positional parameters:  #0>1 #1>True
+[SQL: SELECT this_.Id as Id66_3_, this_.Number as Number66_3_, this_.Published as Published66_3_, this_.Latest as Latest66_3_, this_.Data as Data66_3_, this_.ContentItemRecord_id as ContentI6_66_3_, contentite1_.Id as Id65_0_, contentite1_.Data as Data65_0_, contentite1_.ContentType_id as ContentT3_65_0_, sitesettin4_.Id as Id33_1_, sitesettin4_.SiteSalt as SiteSalt33_1_, sitesettin4_.SiteName as SiteName33_1_, sitesettin4_.SuperUser as SuperUser33_1_, sitesettin4_.PageTitleSeparator as PageTitl5_33_1_, sitesettin4_.HomePage as HomePage33_1_, sitesettin4_.SiteCulture as SiteCult7_33_1_, sitesettin4_.ResourceDebugMode as Resource8_33_1_, sitesettin4_.PageSize as PageSize33_1_, sitesettin4_.SiteTimeZone as SiteTim10_33_1_, contenttyp5_.Id as Id67_2_, contenttyp5_.Name as Name67_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ?] ---> System.Data.SqlServerCe.SqlCeException: There is a file sharing violation. A different process might be using the file. [ C:\DWASFiles\Sites\esell\VirtualDirectory0\site\wwwroot\App_Data\Sites\Default\Orchard.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentManager.GetManyImplementation(QueryHints hints, Action`2 predicate) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 328
+   at Orchard.ContentManagement.DefaultContentManager.Get(Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 140
+   at Orchard.ContentManagement.ContentGetExtensions.Get[T](IContentManager manager, Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentExtensions.cs:line 160
+   at Orchard.Core.Settings.Services.SiteService.GetSiteSettings() in c:\Build\Orchard\src\Orchard.Web\Core\Settings\Services\SiteService.cs:line 46
+   at Orchard.Settings.CurrentSiteWorkContext.Get[T](String name) in c:\Build\Orchard\src\Orchard\Settings\CurrentSiteWorkContext.cs:line 13
+   at Orchard.Environment.WorkContextImplementation.<>c__DisplayClass7`1.<FindResolverForState>b__2(IWorkContextStateProvider wcsp) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Environment.WorkContextImplementation.FindResolverForState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.WorkContextImplementation.GetState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 27
+   at Orchard.WorkContext.get_CurrentSite() in c:\Build\Orchard\src\Orchard\WorkContext.cs:line 52
+   at Orchard.Warmup.Services.WarmupTask.Sweep()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 31

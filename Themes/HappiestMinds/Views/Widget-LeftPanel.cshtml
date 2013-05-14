@@ -1,0 +1,14 @@
+﻿@if (Model.ContentItem.ContentType == "TaxonomyMenu")
+{
+    <div class="categories">
+        <div class="cat_bg"></div>
+        <div class="left_nav">
+            @Display(Model.Content)
+        </div>
+        <div class="left_navcurve"></div>
+    </div>
+}
+else
+{
+    @Display(Model.Content)
+}

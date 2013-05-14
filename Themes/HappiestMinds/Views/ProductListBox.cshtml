@@ -1,0 +1,29 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Widgets.Models
+@{
+    var itemIndex = 1;
+    var title = ((IContent)Model.ContentItem).As<WidgetPart>().Title;
+    var count = ((IEnumerable<dynamic>)Model).Count();
+}
+<div class="header_holder">
+<div class="h_leftcurve"></div>
+<div class="h_midbg">
+<h1>@title</h1>
+</div>	
+<div class="h_rightcurve"></div>
+</div>
+<!-- header_holder end here -->
+				
+<div class="prod_holder"> 
+    @foreach(var item in Model) {
+        var posClass = "";
+        if (itemIndex == 1) {posClass = "first";}
+        if (itemIndex == count) { posClass = "last"; }
+        <div class="prod_box box-@itemIndex @posClass"> 
+            <div class="lb_section">
+                @Display(item)
+            </div>
+        </div>
+        itemIndex++;
+    }
+</div>

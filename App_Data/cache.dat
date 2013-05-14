@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Tenants>
+  <Default>17|Orchard.Framework;Common;Contents;Dashboard;Navigation;Reports;Scheduling;Settings;Shapes;Title;Orchard.Pages;Orchard.Themes;Orchard.Users;Orchard.Roles;Orchard.Modules;PackagingServices;Orchard.Packaging;Gallery;Orchard.Recipes;Orchard.jQuery;Orchard.Alias;Orchard.Autoroute;Orchard.Alias;Orchard.Tokens;Orchard.CodeGeneration;Contrib.Taxonomies;eSell;Orchard.Projections;Orchard.Forms;Feeds;Orchard.Fields;Orchard.MediaPicker;Orchard.Media;TinyMce;Orchard.Rules;Orchard.Scripting;Orchard.Scripting.Rules;Orchard.Widgets;Orchard.Scripting.Lightweight;Orchard.ContentTypes;Orchard.ImportExport;HappiestMinds;Orchard.Warmup;|</Default>
+</Tenants>

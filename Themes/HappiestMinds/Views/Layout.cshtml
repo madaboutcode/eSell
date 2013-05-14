@@ -1,0 +1,108 @@
+﻿@{
+    Func<dynamic, dynamic> Zone = x => Display(x);
+}
+@{
+    SetMeta("viewport","width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no");
+    SetMeta("X-UA-Compatible", "IE=edge,chrome=1");
+    Style.Include("reset.css");
+    Style.Include("style.css");
+    Style.Include("device.css");
+    Style.Include("uistyle.css");
+
+    Script.Include("jquery.min.js").AtFoot();
+    Script.Include("touch.js").AtFoot();
+    
+    Model.Id = "wrapper";
+    var tag = Tag(Model, "div");
+}
+@tag.StartElement
+<div id="header">
+    <div class="logo"><a href="@Url.Content("~/")">@Html.Image(Html.ThemePath(WorkContext.CurrentTheme, "/Styles/images/logo.png"), "Happiest Minds", null)</a></div>
+    <div class="small_nav">
+        <ul>
+            <li><a href="javascript:void(0);">Help</a></li>
+            @if (WorkContext.CurrentUser == null) {
+                <li><a href="@Url.Content("~/Users/Account/logon")">Login</a></li>
+                <li><a href="javascript:void(0);">Signup</a></li>
+            }
+            else
+            {
+                <li>@Html.ActionLink(T("Sign Out").ToString(), "LogOff", new { Controller = "Account", Area = "Orchard.Users", ReturnUrl = Context.Request.RawUrl }, new { rel = "nofollow" })</li>
+                if (AuthorizedFor(Orchard.Security.StandardPermissions.AccessAdminPanel))
+                {
+                    <li>@Html.ActionLink(T("Dashboard").ToString(), "Index", new { Area = "Dashboard", Controller = "Admin" })</li>
+                }
+            }
+        </ul>
+    </div>
+    @if (Model.Header != null)
+    {
+        @Zone(Model.Header)
+    }
+</div>
+<div id="content">
+    @if (Model.LeftPanel != null)
+    {
+        <div id="left_col">
+            @Zone(Model.LeftPanel)
+        </div>
+    }
+    <div id="right_col">
+        <div class="search_holder">
+            <div class="s_leftbg"></div>
+            <div class="s_midbg">
+                <form id="form_search" name="form_search" action="">
+                    <div id="categories-minimenu">
+                        <h2>
+                            Shop by <b>Category</b><b class="down-icon"></b></h2>
+                        <b id="micro-icon"></b>
+                        
+                    </div>
+                    <div class="search_txt">
+                        Search</div>
+                    <div class="search_ddl">
+                        <select id="ddl_categories" name="ddl_categories">
+                            <option value="all">All Categories</option>
+                            <option value="1">Books</option>
+                            <option value="2">Mobiles &amp; Accessories</option>
+                            <option value="3">Computers</option>
+                            <option value="4">Cameras</option>
+                            <option value="5">Gaming</option>
+                            <option value="6">Music, Movies &amp; Posters</option>
+                            <option value="7">Tv, Video &amp; Audio</option>
+                            <option value="8">Home &amp; Kitchen</option>
+                            <option value="9">Pens &amp; Stationery</option>
+                            <option value="10">Belts, Bags &amp; Luggage</option>
+                            <option value="11">Watches</option>
+                            <option value="12">Beauty &amp; Health Care</option>
+                            <option value="13">Baby Care</option>
+                            <option value="14">Toys</option>
+                        </select>
+                    </div>
+                    <div class="search_txtbox">
+                        <input type="text" id="txt_search" name="txt_search"><input type="button" id="btn_search"
+                                                                                    value=""></div>
+                </form>
+                <div class="cart_info">
+                    <a href="javascript:void(0);">Cart (12)</a></div>
+            </div>
+            <div class="s_rightbg"></div>
+        </div>
+        @if (Model.BeforeContent != null)
+        {
+            @Zone(Model.BeforeContent)
+        }
+        @if (Model.Content != null)
+        {
+            @Zone(Model.Content)
+        }
+    </div>
+    
+    @if (Model.Footer != null)
+    {
+        <div id="footer">
+        @Zone(Model.Footer)
+        </div>
+    }
+</div>
+@tag.EndElement

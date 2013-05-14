@@ -1,0 +1,15 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Utility.Extensions;
+@{
+    var contentItem = Model.ContentItem;
+    var content = contentItem as IContent;
+}
+<div class="lb_img">
+    <a href="@Url.ItemDisplayUrl(content)">
+        @{ var img = contentItem.ProductPart.ProductImage; }
+        @*<img src="@Url.Content(img.Url)" width="@img.Width" height="@img.Height" />*@
+        @Html.ResizedImage((string)img.Url, 125,125)
+    </a>
+</div>
+<div class="lb_name"><a href="@Url.ItemDisplayUrl(content)">@contentItem.TitlePart.Title</a></div>
+<div class="lb_price">Rs. @contentItem.ProductPart.Price</div>

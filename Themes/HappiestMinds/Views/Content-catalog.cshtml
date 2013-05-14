@@ -1,0 +1,17 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    if (Model.Title != null)
+    {
+        Layout.Title = Model.Title;
+    }
+
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+}
+<div class="header_holder">
+    <div class="h_leftcurve"></div>
+    <div class="h_midbg">
+        <h1>@Display(Model.Header)</h1>
+    </div>
+    <div class="h_rightcurve"></div>
+</div>
+@Display(Model.Content)

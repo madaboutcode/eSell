@@ -1,0 +1,41 @@
+.ui-corner-all {border-radius:10px !important; border-radius:10px; border:solid 2px #003366; behavior: url(PIE.htc);
+}
+.ui-dialog {box-shadow:0px 0px 30px grey !important; font-family:Arial !important;}
+.ui-dialog .ui-corner-all{border:0px !important;}
+.ui-dialog-title{font-size:20px; font-weight:normal;}
+.ui-widget-header{border:0px solid #008A00; background:none!important; color:#003366;}
+.ui-icon{
+background-image: url("../themes/redmond/images/ui-icons_217bc0_256x240.png") !important;
+}
+.ui-icon-closethick{
+/*background-position: -30px -190px !important;*/
+background:none !important;
+}
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{
+/*background-position: -30px -190px !important;*/
+background:none !important;
+}
+.ui-dialog .ui-dialog-content{
+border-color:#003366 !improtant;
+padding:10px;
+width:450px;
+margin:10px;
+}
+.box_txtholder{}
+.box_txtholder p{color:#003366; font-style:italic; line-height:18px; padding-bottom:8px; }
+.box_txtholder2 p{color:#003366; font-style:normal; line-height:18px; padding-bottom:8px; }
+.ui-dialog-titlebar-close{ text-decoration:none !important; top:10px !important; position:absolute !important; right:17px !important; }
+.ui-dialog-titlebar-close .ui-icon{
+border:1px solid #003366;
+padding:8px; 
+text-indent: 0px !important;
+text-align:center;
+text-decoration:none !important;
+background:#003366 !important;
+width:15px;
+color:#fff !important;
+border-radius:35px;
+background-color:#fff;
+-moz-border-radius:35px; /* Firefox 3.6 and earlier */
+}
+

@@ -1,0 +1,23 @@
+﻿@using Orchard.Utility.Extensions;
+
+@{
+    string name = Model.ContentField.DisplayName;
+    string url = Model.ContentField.Url;
+    string alt = Model.ContentField.AlternateText;
+}
+<div class="media-picker-field media-picker-field-@name.HtmlClassify()">
+    @Html.Image(url, alt, new { width = Model.ContentField.Width, height = Model.ContentField.Height})
+</div>
+
+@* Other available properties *@
+@* 
+    Alternate Text: @Model.ContentField.AlternateText
+    Class: @Model.ContentField.Class
+    Style: @Model.ContentField.Style
+    Alignment @Model.ContentField.Alignment
+    Width: @Model.ContentField.Width
+    Height: @Model.ContentField.Height
+    
+    You can also display an image using this example, and add the attributes you need:
+    <img src="@Href(Model.ContentField.Url)" />
+*@

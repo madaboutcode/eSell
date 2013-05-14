@@ -1,0 +1,7 @@
+Name: HappiestMinds
+Author: The Orchard Team
+Website: http://www.orchardproject.net
+Description: HappiestMinds standard theme
+Version: 1.4
+Tags: HappiestMinds
+Zones: Header, LeftPanel, BeforeContent, Content, RightPanel, Footer

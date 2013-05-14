@@ -1,0 +1,12 @@
+﻿Name: eSell
+AntiForgery: enabled
+Author: Ajeesh Mohan
+Website: http://happiestminds.com
+Version: 3.0
+OrchardVersion: 1.0
+Description: An eCommerce module
+Dependencies: Orchard.Projections, Orchard.Fields, Contrib.Taxonomies
+Features:
+    eCommerce:
+        Description: Enable the eCommerce feature.
+		Category: eSell

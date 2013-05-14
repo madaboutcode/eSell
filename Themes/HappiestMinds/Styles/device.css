@@ -1,0 +1,143 @@
+
+#categories-minimenu { display: none; }
+
+#categories-minimenu { float: left; }
+
+#categories-minimenu h2 { 
+    display: block; 
+    color: white; 
+    font-size: 11px; 
+    padding-left: 10px; 
+    padding-top: 5px;
+    
+     height: 40px;
+    width: 110px;
+    margin-right: 60px;
+    cursor: default;
+}
+#categories-minimenu.hover h2 { background: #f08a24; }
+#categories-minimenu h2 b { display: block; font-size: 18px; font-weight: bold; float: left;}
+#categories-minimenu .down-icon { background:url('../images/down-menu.png') no-repeat 0px 0px;width:16px;height:16px; }
+#categories-minimenu ul { 
+    display: none; 
+    position: absolute;
+    z-index: 1000; 
+    border: solid 1px #BBBEC1; 
+    background: white; 
+    width: 250px;
+}
+
+#categories-minimenu ul {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;    
+}
+
+
+#categories-minimenu.hover ul { display: block !important;}
+
+
+#categories-minimenu ul li{display:block;width:100%;border-bottom:solid 1px #e5e5e5;}
+#categories-minimenu ul li a {
+	color:#454545;
+	display:block;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 0px 5px 25px;
+	background:url('../images/arrow2.png') no-repeat 8px 9px;
+}
+
+#categories-minimenu ul a:hover{
+	color:#000;
+	display:block;
+	text-decoration:none;
+	background:#f18d23 url('../images/arrow3.png') no-repeat 8px 9px;
+}
+
+#micro-icon { }
+
+/* iPad potrait mode */
+@media (max-width : 955px) {
+	#header .widget-featured_info { display: none;}
+	#left_col { display: none; }
+	#wrapper { width: 750px;}
+	#right_col { float: none !important; margin: 0 auto; }
+
+	/* categories to dropdown menu */
+	/*#form_search .search_txt ,*/ #form_search .search_ddl { display: none !important; }
+	#categories-minimenu { display: inline-block !important; }
+}
+
+/* iPhone portait mode */
+@media (max-width : 750px) {
+	#wrapper { width: 98% !important; }
+    .widget-catalog-promo { display: none;}
+	.search_holder,.header_holder  { width: 100% !important; }
+	.small_nav,.search_txt{ display: none !important; }
+	#right_col .s_midbg { width: 100% !important; border-radius: 5px;}
+	.s_leftbg, .s_rightbg,.h_leftcurve,.h_rightcurve { display: none !important; }
+	.cart_info { position: absolute; top:0px; right: 10px;}
+	.logo { padding-top: 0px !important; }
+	#right_col { width: 100% !important; }
+	.prod_box { width: 33% !important; }
+	.banner img { width: 100%; }
+	#form_search { width: 100%; overflow: hidden; height: 45px;}
+	.search_txtbox { float: right !important; padding-right: 10px !important; width: 70%;}
+	#txt_search { width:90% !important; }
+	#categories-minimenu h2 { margin-right: 0px; }
+	.search_txtbox { position: relative; }
+	#txt_search { position: absolute; right: 50px; }
+	#btn_search { position: absolute; right: 5px; left: auto;}
+	.h_midbg { width: 100% !important; border-right: 1px solid #bdbdbd; border-left: 1px solid #bdbdbd; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+	.viewmore { padding-right: 10px; }
+	.box-4 { display: none; }
+	.box-3 { border: 0 !important; }
+	.prod_holder { width: 100% !important;}
+	#copyright { display:block; float: left !important;}
+}
+
+@media (max-width : 520px) {
+	#categories-minimenu h2 { display: none !important; }
+	#micro-icon { 
+		width: 13px; 
+		height: 14px; 
+		display: block !important; 
+		position: relative; 
+		top: 10px; 
+		left: 10px; 
+		padding: 3px 8px; 
+		border-radius: 2px; 
+		margin-bottom: 15px;
+	}
+	#categories-minimenu.hover #micro-icon { background-color: grey; }
+	#micro-icon { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAYAAAD0f5bSAAAAM0lEQVQoz2NkYGBQYSARMP4HArppOkCyJlI1gBzGOPgD4j/dAkKaZJu+fPlykmSb6BYQABnILK8EDXjoAAAAAElFTkSuQmCC'); background-repeat: no-repeat; background-position: 8px 3px;}
+	.box-3 { display: none; }
+	.box-2 { border: 0 !important; }
+	.prod_holder { width: 100% !important;}
+	.prod_box { width: 49.5% !important; }
+    .detail-price,.detail-cartbutton,.detail-instock { width:100% !important; clear: both; }
+    .detail-heroimage { width:  100%; padding-bottom: 20px;}
+    .detail-body { padding-top: 20px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

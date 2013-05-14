@@ -1,0 +1,27 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+    
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    var productPart = Model.ContentItem.ProductPart;
+    var bodyPart = Model.ContentItem.BodyPart;
+    string title = Model.Title;
+    string heroimg = productPart.ProductImage.Url;
+}
+<article class="content-item @contentTypeClassName detail-wrapper">
+    <header>
+        @Display(Model.Header)
+    </header>
+    <div class="detail-heroimage">@Html.ResizedImage(heroimg,360,450)</div>
+    <div class="detail-price">Rs. @productPart.Price</div>
+    <div class="detail-cartbutton"><input type="button" value="Add To Cart" /></div>
+    <div class="detail-instock">In Stock</div>
+    <div class="detail-body">
+        <header>Product Details</header>
+        <div class="detail-body-text">
+            @Html.Raw(bodyPart.Text)
+        </div>
+    </div>
+</article>

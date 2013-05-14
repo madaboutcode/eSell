@@ -1,0 +1,33 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Widgets.Models
+@{
+    IEnumerable<object> contentItems = Model.ContentItems;
+    Model.ContentItems.Classes.Add("content-items");
+    Model.ContentItems.Classes.Add("term-content-items");
+    var itemIndex = 1;
+    var count = contentItems.Count();
+}
+<div class="prod_holder">
+    @foreach (var item in Model.ContentItems)
+    {
+        var posClass = "";
+        if (itemIndex == 1)
+        {
+            posClass = "first";
+        }
+        if (itemIndex%4 ==0 || itemIndex == count)
+        {
+            posClass = "last";
+        }
+        <div class="prod_box box-@itemIndex @posClass">
+            <div class="lb_section">
+                @Display(item)
+            </div>
+        </div>
+        itemIndex++;
+    }
+</div>
+@if (contentItems == null || count < 1)
+{
+    <p>@T("There are no products under this category.")</p>
+}
